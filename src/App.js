@@ -6,7 +6,7 @@ function App() {
 
   // Fetch all users
   const fetchUsers = () => {
-    fetch('https://nodebackend-zp7w.onrender.com/')
+    fetch('https://nodebackend-zp7w.onrender.com/users')
       .then(res => res.json())
       .then(data => setUsers(data));
   };
@@ -18,7 +18,7 @@ function App() {
   // Add a new user
   const addUser = () => {
     if (!newName.trim()) return;
-    fetch('https://nodebackend-zp7w.onrender.com/', {
+    fetch('https://nodebackend-zp7w.onrender.com/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: newName })
@@ -31,7 +31,7 @@ function App() {
 
   // Update user (example: update user 1)
   const updateUser = (id) => {
-    fetch('https://nodebackend-zp7w.onrender.com/${id}', {
+    fetch(`https://nodebackend-zp7w.onrender.com/users/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: 'Updated User' })
@@ -41,7 +41,7 @@ function App() {
 
   // Delete a user
   const deleteUser = (id) => {
-    fetch(`https://nodebackend-zp7w.onrender.com/${id}`, {
+    fetch(`https://nodebackend-zp7w.onrender.com/users/${id}`, {
       method: 'DELETE'
     })
       .then(() => fetchUsers());
