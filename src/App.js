@@ -68,7 +68,7 @@ function App() {
         onChange={(e) => setNewName(e.target.value)}
         placeholder="Enter user name"
       />
-      <button onClick={addUser}>Add</button>
+      <button onClick={addUser}>Add User</button>
 
       <h2>Update User 1:</h2>
       <button onClick={() => updateUser(1)}>Update User 1 to 'Updated User'</button>
