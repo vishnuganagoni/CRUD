@@ -71,7 +71,7 @@ function App() {
       <button onClick={addUser}>Add</button>
 
       <h2>Update User 1:</h2>
-      <button onClick={updateUser}>Update User 1 to 'Updated User'</button>
+      <button onClick={() => updateUser(1)}>Update User 1 to 'Updated User'</button>
     </div>
   );
 }
