@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import App from './App';
+import App from '../App';
 
 beforeEach(() => {
   global.fetch = jest.fn((url, options) => {
